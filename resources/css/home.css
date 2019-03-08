@@ -1,0 +1,7 @@
+.header-img {
+	width: 100%;
+	background:url('../img/largeHeaderImg.jpg');
+	height:500px;
+	background-position: center;
+	background-size: cover;
+}
