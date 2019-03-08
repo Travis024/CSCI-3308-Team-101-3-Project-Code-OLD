@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 .header-img {
 	width: 100%;
 	background:url('../img/largeHeaderImg.jpg');
 	height:500px;
 	background-position: center;
 	background-size: cover;
+=======
+.navbar-default {
+	background-color: #75B247;
+}
+
+.navbar-writing{
+	color: #FFFFFF;
+>>>>>>> d983911e30069f9de7f06ada9de8d2fe628a85e0
 }
