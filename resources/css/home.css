@@ -1,4 +1,13 @@
+/* Navbar */
+.navbar-default {
+	background-color: #75B247;
+}
 
+.navbar-writing{
+	color: #FFFFFF;
+}
+
+/* Hero  */
 .header-img {
 	width: 100%;
 	background:url('../img/largeHeaderImg.jpg');
@@ -6,11 +15,8 @@
 	background-position: center;
 	background-size: cover;
 }
-.navbar-default {
-	background-color: #75B247;
-}
 
-.navbar-writing{
-	color: #FFFFFF;
-
+/* Content Grid */
+.grid-label {
+	padding-top: 25px;
 }
