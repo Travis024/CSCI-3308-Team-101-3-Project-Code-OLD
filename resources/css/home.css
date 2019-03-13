@@ -3,8 +3,23 @@
 	background-color: #75B247;
 }
 
+/*Defined Class, White*/
 .navbar-writing{
 	color: #FFFFFF;
+}
+
+/*Defined Class, Blue */
+.blue-color{
+	background-color: #6F80FF;
+}
+
+/*Defined Class, Green*/
+.green-color{
+	background-color: #75B247;
+}
+/*Defined Class, cream */
+.cream-color{
+	color: #F5F7DF;
 }
 
 /* Hero  */
