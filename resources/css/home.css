@@ -35,3 +35,13 @@
 .grid-label {
 	padding-top: 25px;
 }
+
+.row {
+	background: rgba(5, 5, 5, 0.2);
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	margin-right: 20%;
+}
