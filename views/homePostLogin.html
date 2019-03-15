@@ -1,0 +1,137 @@
+<!-- Home Page -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>LivBoulder Home</title>
+	<link rel='icon' href='../resources/img/favicon.ico' type='image/x-icon'/>
+	<link href="../resources/css/home.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	
+  </head>
+  <body>
+	<nav class="navbar navbar-default navbar-expand-lg">
+	  <a class="navbar-brand" href="home.html">
+    <!-- This is where we would add a logo to our nav bar if we want it -->
+		<!--<img class="rounded-circle" src="../resources/img/cu_boulder_logo.jpg" alt="" width="30" height="30"> -->
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarText">
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item active">
+			<a class="nav-link navbar-writing" href="home.html">Home</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link navbar-writing" href="recommendations.html">Recommendations <span class="sr-only">(current)</span></a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link navbar-writing" href="registration.html">Registration</a>
+		  </li>
+		</ul>
+		<div class="form-inline my-2 my-lg-0">
+			<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Login</button>
+		</div>
+	  </div>
+	</nav>
+
+	<!-- Carousel !!!!!!!!!!! Needs images to be centered, and buttons less wide -->
+	<div id="demo" class="carousel slide" data-ride="carousel">
+
+	  <!-- Indicators -->
+	  <ul class="carousel-indicators">
+		<li data-target="#demo" data-slide-to="0" class="active"></li>
+		<li data-target="#demo" data-slide-to="1"></li>
+		<li data-target="#demo" data-slide-to="2"></li>
+	  </ul>
+
+	  <!-- The slideshow -->
+	  <div class="carousel-inner">
+		<div class="carousel-item active">
+		  <img src="../resources/img/1.jpg" alt="Trail 1">
+		  <div class="carousel-caption d-none d-md-block">
+			<h5>Header for image 1</h5>
+			<p>Regular text for image 1</p>
+		  </div>
+		</div>
+		<div class="carousel-item">
+		  <img src="../resources/img/2.jpg" alt="Trail 2">
+		  <div class="carousel-caption d-none d-md-block">
+			<h5>Header for image 2</h5>
+			<p>Regular text for image 2</p>
+		  </div>
+		</div>
+		<div class="carousel-item">
+		  <img src="../resources/img/3.jpg" alt="Trail 3">
+		  <div class="carousel-caption d-none d-md-block">
+			<h5>Header for image 3</h5>
+			<p>Regular text for image 3</p>
+		  </div>
+		</div>
+	  </div>
+
+	  <!-- Left and right controls -->
+	  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+		<span class="carousel-control-prev-icon"></span>
+	  </a>
+	  <a class="carousel-control-next" href="#demo" data-slide="next">
+		<span class="carousel-control-next-icon"></span>
+	  </a>
+
+	</div>
+	
+	<!-- Button below carousel to add hike to list of ones you like !!!!!!!!!!!! change design, implement functionality -->
+	<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Like this hike</button>
+	
+	<!-- row contains two columns that will be our two sections at bottom -->
+	<div class="row">
+		<!-- This column is for hikes you want to do, add hikes you've liked to it and add links from photos to that hike -->
+	  <div class="column">
+		<h1 style="text-align:center">Hikes You Want To Do</h1>
+		
+		<div class="row">
+		  <div class="col-md-12">
+			<div id="mdb-lightbox-ui"></div>
+			<div class="mdb-lightbox no-margin">
+				<figure class="col-md-4">
+				<a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(121).jpg"
+				  data-size="1600x1067">
+				  <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(121).jpg"
+					class="img-fluid">
+				  <h3 class="text-center my-3">Photo title</h3>
+				</a>
+			  </figure>
+
+			  <figure class="col-md-4">
+				<a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(96).jpg"
+				  data-size="1600x1067">
+				  <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(96).jpg"
+					class="img-fluid" />
+				  <h3 class="text-center my-3">Photo title</h3>
+				</a>
+			  </figure>
+			</div>
+		</div>
+		</div>
+	</div>
+	  <!-- This column is for hikes you've already done, after you click done this hike it's photo is added here -->
+	  <div class="column">
+		<h1 style="text-align:center">Hikes You've Already Done</h1>
+	  </div>
+	</div>
+	
+	
+	
+	
+	
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
