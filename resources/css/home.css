@@ -33,15 +33,17 @@
 
 /* Content Grid */
 .grid-label {
-	padding-top: 25px;
+	padding-top: 50px;
 }
 
+/*Defined Class, creates grey box around text sections */
 .row {
 	background: rgba(5, 5, 5, 0.2);
 	text-align: center;
 }
 
-p {
+/*Defined Class, alligns writing in paragraphs to center */
+.txt-align {
 	text-align: center;
 	margin-right: 20%;
 }
