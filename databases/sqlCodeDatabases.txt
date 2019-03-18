@@ -1,0 +1,61 @@
+NOTE: Remember to 'create database name;'
+      Then use \c name to enter database
+      Then create these tables!
+
+CREATE TABLE account(
+    id SERIAL PRIMARY KEY,
+    accountID INT,
+    username VARCHAR(45),
+    password VARCHAR(45),
+    name VARCHAR(45),
+    email VARCHAR(45),
+    biography VARCHAR(400),
+    gender VARCHAR (6)
+);
+
+CREATE TABLE preferences(
+    id SERIAL PRIMARY KEY,
+    water BOOL,
+    biking BOOL,
+    hiking BOOL,
+    lots_of_excercise BOOL,
+    competitive BOOL,
+    easy BOOL,
+    long BOOL,
+    adventurous BOOL,
+    close BOOL
+);
+
+CREATE TABLE activities(
+    id SERIAL PRIMARY KEY,
+    activity VARCHAR(100) NOT NULL,
+    description VARCHAR(400) NOT NULL,
+    img VARCHAR(100) NOT NULL,
+    water BOOL NOT NULL,
+    biking BOOL NOT NULL,
+    hiking BOOL NOT NULL,
+    lots_of_excercise BOOL NOT NULL,
+    competitive BOOL NOT NULL,
+    easy BOOL NOT NULL,
+    long BOOL NOT NULL,
+    adventurous BOOL NOT NULL,
+    close BOOL NOT NULL
+);
+
+INSERT INTO activities(activity, description, img, water, biking, hiking, lots_of_excercise, competitive, easy, long, adventurous, close)
+VALUES('Pedego Electric Bike Tour', 'Take a 3-hour electric bike tour and explore historic downtown Boulder, Boulder Canyon, Chatauqua, and more!', '../resources/img/pedegoBike.jpg', FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE),
+('Front Range Anglers Fishing', 'Take a guided fly fishing expedition for Trout in Boulder and along the Front Range!', '../resources/img/frontRangeAngler.jpg', TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE),
+('Hot Air Balloon Flight', 'Enjoy gorgeous views of mountain scenery, Colorados plains, and wildlife as far as the eye can see as you soar through the sky in a hot air balloon!', '../resources/img/hotAirBalloon.jpg', FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, FALSE),
+('Boulder Creek Path', 'Go for a stroll or hop on your bike as you travel along the Boulder Creek Path! This path follows the gorgeous Boulder Creek and allows for multiple pitstops at some of Boulders finest locations.', '../resources/img/boulderCreekPath.jpg', TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE),
+('Mount Sanitas Trail', 'This is a 90 minute hike with views that allow you to see almost all the way to Kansas! It is rated as a moderate difficulty, so make sure to bring water!', '../resources/img/mountSanitas.jpg', FALSE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE),
+('Royal Arch Trail', 'A challenging hike with an absolutley stunning reward at the top. Do not be confused by the false summit - there is still an extra half mile from that point!', '../resources/img/royalArch.jpg', FALSE, FALSE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE),
+('Valmont Bike Park', 'No matter your experience in mountain biking, the Valmont Bike Park has what you are looking for! Enjoy a day in the sun and some gnarly rides!', '../resources/img/valmontBike.jpg', FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE),
+('Flatiron Golf Course', 'Enjoy Boulders premier golf course with a wonderful view of the Flatirons! Course regulars love the moderate challenge of the course and the friendly staff.', '../resources/img/flatironsGolf.jpg', FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE),
+('Boulder Ale Trail', '15 miles, 12 breweries, and 0 cars! The Boulder Ale trail is the perfect way to enjoy your two favorite things in one of the nations biggest brewing cities!', '../resources/img/boulderAle.jpg', FALSE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE),
+('Flatiron Hike', 'Hike up Boulders most prominent features - the Flatirons! This is a 2.6 mile round trip hike that offers a gorgeous panoramic view at the top.', '../resources/img/flatironHike.jpg', FALSE, FALSE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE),
+('Sombrero Ranch Horseback Riding', 'Interested in going horseback riding? Then the Sombrero Ranch has you covered! Half-hour and hour long rides are both offered, and the horses could not be more friendly!', '../resources/img/horsebackRiding.jpg', FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, TRUE, FALSE),
+('Eldora Ski Resort', 'It is time to hit the powder, and do not expect to come back without a smile on your face! The Eldora Ski Resort is known throughout Colorado as one of the best places for skiing, and it is a short ride from Boulder.', '../resources/img/skiing.jpg', FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE),
+('Bear Peak Trail', 'A must-do hike for anyone in Colorado! The trail is challenging, but the views seen throughout the hike are truly stunning. Plus, a good workout means you can kick back an extra beer after!', '../resources/img/bearPeak.jpg', FALSE, FALSE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE),
+('Boulder Creek Tubing', 'Kick back, relax, and enjoy a wonderful time tubing down the Boulder Creek! While some take to the creek in the Winter as a show of grit, we recommend this as a Summer activity.', '../resources/img/tubing.jpg', TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, TRUE),
+('Boulder Resevoir Paddleboarding', 'The cool breeze in your hair, the warm sun on your shoulders — there is no better way to enjoy a summer day than cruising along the glittering waters of Boulder Reservoir on a stand-up paddleboard.', '../resources/img/paddleboarding.jpg', TRUE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE),
+('Flower Picking', 'Longs Gardens in Boulder allows visitors to pick and dig up their very own flowers! We are betting this is an experience that you have never had before!', '../resources/img/flowerPicking.jpg', FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE);
