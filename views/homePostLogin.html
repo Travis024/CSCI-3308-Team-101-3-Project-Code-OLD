@@ -40,53 +40,42 @@
 	  </div>
 	</nav>
 
-	<!-- Carousel !!!!!!!!!!! Needs images to be centered, and buttons less wide -->
-	<div id="demo" class="carousel slide" data-ride="carousel">
-
-	  <!-- Indicators -->
-	  <ul class="carousel-indicators">
-		<li data-target="#demo" data-slide-to="0" class="active"></li>
-		<li data-target="#demo" data-slide-to="1"></li>
-		<li data-target="#demo" data-slide-to="2"></li>
-	  </ul>
-
-	  <!-- The slideshow -->
-	  <div class="carousel-inner">
-		<div class="carousel-item active">
-		  <img src="../resources/img/1.jpg" alt="Trail 1">
-		  <div class="carousel-caption d-none d-md-block">
-			<h5>Header for image 1</h5>
-			<p>Regular text for image 1</p>
-		  </div>
-		</div>
-		<div class="carousel-item">
-		  <img src="../resources/img/2.jpg" alt="Trail 2">
-		  <div class="carousel-caption d-none d-md-block">
-			<h5>Header for image 2</h5>
-			<p>Regular text for image 2</p>
-		  </div>
-		</div>
-		<div class="carousel-item">
-		  <img src="../resources/img/3.jpg" alt="Trail 3">
-		  <div class="carousel-caption d-none d-md-block">
-			<h5>Header for image 3</h5>
-			<p>Regular text for image 3</p>
-		  </div>
-		</div>
-	  </div>
-
-	  <!-- Left and right controls -->
-	  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-		<span class="carousel-control-prev-icon"></span>
-	  </a>
-	  <a class="carousel-control-next" href="#demo" data-slide="next">
-		<span class="carousel-control-next-icon"></span>
-	  </a>
-
-	</div>
+	<!-- this is the table that will store our recommendations -->
+	<table class="table">
+	  <thead class="thead-dark">
+		<tr>
+		  <th scope="col">Activity</th>
+		  <th scope="col">Description</th>
+		  <th scope="col">Cute Pic</th>
+		  <th scope="col">Add to things I want to do</th>
+		  <th scope="col">Add to things I've done</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>Bear Peak</td>
+		  <td>The peak of bear</td>
+		  <td><img src="../resources/img/bearPeak.jpg" class="img-fluid" alt="Bear Peak" width="80%"></td>
+		  <td><button type="button" class="btn btn-dark">Add to things you want to do</button></td>
+		  <td><button type="button" class="btn btn-dark">Add to things you've done</button></td>
+		</tr>
+		<tr>
+		  <td>Flatiron Hike</td>
+		  <td>Our beautiful flatirons</td>
+		  <td><img src="../resources/img/flatironHike.jpg" class="img-fluid" alt="Flatiron Hike" width="80%"></td>
+		  <td><button type="button" class="btn btn-dark">Add to things you want to do</button></td>
+		  <td><button type="button" class="btn btn-dark">Add to things you've done</button></td>
+		</tr>
+		<tr>
+		  <td>Horseback Riding</td>
+		  <td>Riding some horses</td>
+		  <td><img src="../resources/img/horsebackRiding.jpg" class="img-fluid" alt="Horses" width="80%"></td>
+		  <td><button type="button" class="btn btn-dark">Add to things you want to do</button></td>
+		  <td><button type="button" class="btn btn-dark">Add to things you've done</button></td>
+		</tr>
+	  </tbody>
+	</table>
 	
-	<!-- Button below carousel to add hike to list of ones you like !!!!!!!!!!!! change design, implement functionality -->
-	<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Like this hike</button>
 	
 	<!-- row contains two columns that will be our two sections at bottom -->
 	<div class="row">
