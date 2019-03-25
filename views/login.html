@@ -1,20 +1,40 @@
 <!-- login-->
 <html>
 	<head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">  
- <link href="../resources/css/my_style.css" rel="stylesheet">
- 
- <title>Login</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ <link href="../resources/css/login.css" rel="stylesheet">
+
+ <title>LivBoulder Login</title>
  </head>
 	<body>
+
+		<nav class="navbar navbar-default navbar-expand-lg">
+		  <a class="navbar-brand" href="home.html">
+	    <!-- This is where we would add a logo to our nav bar if we want it -->
+			<!--<img class="rounded-circle" src="../resources/img/cu_boulder_logo.jpg" alt="" width="30" height="30"> -->
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link navbar-writing" href="home.html">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link navbar-writing" href="register.html">Register <span class="sr-only">(current)</span></a>
+			  </li>
+		  </div>
+		</nav>
+
 	<div class="container">
-	<br> <h1 class="Display-3 text-center">LivBoulder</h1>
+	<br> <h1 class="Display-3 text-center"><b>LivBoulder</b></h1>
 	<hr>
 	<div class="row justify-content-center">
 	<div class="col-md-6">
 	<div class="card">
 	<header class="card-header">
-	<a href="" class="float-right btn btn-outline-primary mt-1">Register</a>
+	<a href="register.html" class="float-right btn btn-outline-success mt-1">Register</a>
 	<h4 class="card-title mt-2 text-center">Sign in</h4>
 	</header>
 	<article class="card-body">
@@ -23,18 +43,18 @@
 		<div class="col form-group">
 		<label class="text-center"> Username </label>
 		<input type="text" id="login" class="form-control" placeholder="username">
-		</div> 
+		</div>
 		</div>
 	<div class="form-group">
 		<label>Password</label>
 		<input type="password" id="password" class="form-control" placeholder="password">
-	</div> 
+	</div>
 	 <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Sign in  </button>
-    </div> 
+        <button type="submit" class="btn btn-success btn-block"> Sign in  </button>
+    </div>
 	</div>
 	</div>
-	</div> 
+	</div>
 	</div>
 	</div>
 	</div>
