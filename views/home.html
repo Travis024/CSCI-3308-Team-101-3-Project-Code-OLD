@@ -26,15 +26,18 @@
 		  <li class="nav-item active">
 			<a class="nav-link navbar-writing" href="home.html">Home</a>
 		  </li>
+      <li class="nav-item">
+      <a class="nav-link navbar-writing" href="#about">About <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link navbar-writing" href="#mission">Mission <span class="sr-only">(current)</span></a>
+      </li>
 		  <li class="nav-item">
-			<a class="nav-link navbar-writing" href="recommendations.html">Register <span class="sr-only">(current)</span></a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link navbar-writing" href="registration.html">My Profile</a>
+			<a class="nav-link navbar-writing" href="register.html">Register <span class="sr-only">(current)</span></a>
 		  </li>
 		</ul>
 		<div class="form-inline my-2 my-lg-0">
-			<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Login</button>
+						<a class="nav-link navbar-writing" href="login.html">Login</a>
 		</div>
 	  </div>
 	</nav>
@@ -47,23 +50,59 @@
 
   <!-- About Grid Section -->
   <section class = "green-color text-white mb-0" id="about">
-    <div class="container about">
-      <h2 class=" text-center cream-color grid-label">About</h2>
+    <div class="container-about">
+      <h1 class=" text-center cream-color grid-label">About</h1>
       <div class="row">
         <div class="col-lg-10 ml-auto cream-color">
-          <p class = "txt-align"> LivBoulder connects people to outdoor adventures based off of their preferences. Simply create a profile and take our activity quiz to explore all of the opportunity Boulder has to offer in the great outdoors. Wheter you are an advanced hiker, or just want to find an easy walking trail, LivBoulder has you covered.</p>
+          <p class = "txt-align"> Since the beginning of mankind, the great outdoors has been a place for humans to find themselves and thrive. However, in today's age, becomming connected with the outdoors is increasingly more difficult. We find ourselves glued to screens, and even when we do have the chance to escape into nature, it's challenging to find a fun activity to get ourselves excited. That's why we created LivBoulder.</p>
+            <h3 class=" txt-align cream-color grid-label">What is it?</h3>
+              <p class = "txt-align">LivBoulder is a website that allows you to find the perfect outdor activty to fill your day with exciement and joy. Simply click on the 'Register' button to begin setting up your profile, where we'll ask you a few questions about your preferences for activities. After that, we'll match you with hikes, bike rides, adventures, and more that we think are the perfect fit for you. You can also add activities to a list of "Things I Want To Do" and rate activities after you've added them to the list "Things I've Done". No matter what you're looking for, LivBoulder has you covered.</p>
+            <h3 class=" txt-align cream-color grid-label">What's the cost?</h3>
+              <p class = "txt-align">There is NO cost to LivBoulder. We believe that getting out and enjoying the great outdoors should be a pain-free experience mentally, physically, and on your wallet. So please, enjoy LivBoulder free of charge! All we ask is that you make some incredible memories.</p>
         </div>
       </div>
     </div>
   </section>
 
+<!--Image carousel to split page up-->
+ <section class = "green-color" id = "image-carousel">
+   <br>
+  <div class="container green-color">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-8 green-color">
+      <div id="carouselExampleSlidesOnly" class="carousel slide container" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../resources/img/homeDivider1.jpg" alt="The boulder mountains">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../resources/img/homeDivider2.jpg" alt="A team of people reeady for a hike">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../resources/img/homeDivider3.jpg" alt="A pair of people cross-country skiing">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+</section>
+
   <!-- Mission Statement Grid Section -->
-  <section class="green-color">
-    <div class="container mission">
-      <h2 class="grid-label cream-color text-center ">Mission Statement</h2>
+  <section class="green-color" id = "mission">
+    <div class="container-mission">
+      <h1 class="grid-label cream-color text-center ">Mission Statement</h1>
       <div class="row">
         <div class="col-lg-10 ml-auto cream-color ">
           <p class= "txt-align"> LivBoulder strives to inspire people to live bolder, more exciting, and more fulfilling lives by connecting them with outdoor experiences right in their own backyard.</p>
+            <h3 class=" txt-align cream-color grid-label">How?</h3>
+              <p class = "txt-align">At LivBoulder, we're constatnly on the lookout for new activities that we think our members would enjoy. We personally test every activity outselves so that we know exactly who to recommend it to or if we shouldn't even recommend it at all. It might sound like hard work to spend our days out hiking, biking, swimming, and enjoying Boulder, and you're right - it really is. But we care so much about our users that we do it anyways.</p>
+            <h3 class = "txt-align cream-color grid-label">Our promise</h3>
+              <p class = "txt-align">Our promise to you is that this mission statement will never change. We will always dedicate our time to makign sure that you are able to make the most of of the wonderous things that Mother Nature has to offer. In a world where users can hardly trust any business, we hope to be a beacon of light in a tunnel otherwise filled with darkness.</p>
         </div>
       </div>
     </div>
@@ -72,48 +111,67 @@
   <!-- Team Grid Section -->
   <section class = "green-color" id="team">
     <div class="container">
-      <h2 class="grid-label cream-color text-center ">Meet our Team</h2>
+      <h1 class="grid-label cream-color text-center ">Meet our Team</h1>
+      <br>
+      <br>
     </div>
 
      <div class="card-deck">
 	    <div class="card border-0">
 	      <div class="card-body text-center green-color">
 	      	<img class="card-img-top rounded-circle" src='../resources/img/Brenda_photo.jpg' alt="Brenda image" >
-	        <p class="card-text cream-color">Brenda</p>
-	     
+	        <h4 class="card-text cream-color">Brenda</h4>
 	      </div>
 	    </div>
 	    <div class="card border-0">
 	      <div class="card-body text-center green-color">
 	      	<img class="card-img-top rounded-circle" src='../resources/img/Ryan_photo.jpg' alt="Ryan image" >
-	        <p class="card-text cream-color">Ryan</p>
+	        <h4 class="card-text cream-color">Ryan</h4>
 	      </div>
 	    </div>
 	    <div class="card border-0">
 	      <div class="card-body text-center green-color">
-	        <p class="card-text cream-color">Matt</p>
+	        <h4 class="card-text cream-color">Matt</h4>
 	      </div>
 	    </div>
 	    <div class="card border-0">
 	      <div class="card-body text-center green-color">
-
-	        <p class="card-text cream-color">Travis</p>
+          <img class="card-img-top rounded-circle" src='../resources/img/travisHeadshot.jpg' alt="Travis images" >
+	        <h4 class="card-text cream-color">Travis</h4>
 	      </div>
-	    </div>  
+	    </div>
 	     <div class="card border-0">
 	      <div class="card-body text-center green-color">
-	        <p class="card-text cream-color">Yang</p>
+	        <h4 class="card-text cream-color">Yang</h4>
 	      </div>
-	    </div>  
+	    </div>
 	     <div class="card border-0">
 	      <div class="card-body text-center green-color">
-	        <p class="card-text cream-color">Grey</p>
+	        <h4 class="card-text cream-color">Grey</h4>
 	      </div>
-	    </div>  
+	    </div>
 	</div>
   </section>
 
-  <br></br>
+<!--Page footer-->
+<section class = "footer">
+  <footer class="page-footer font-small unique-color-dark pt-4">
+      <div class="container">
+        <ul class="list-unstyled list-inline text-center py-2">
+          <li class="list-inline-item">
+            <h5 class="mb-1" style = "color: white">Register For Free Today: </h5>
+          </li>
+          <li class="list-inline-item">
+            <a href = "register.html" class = "nav-link navbar-writing"><h5>Sign up!</h5></a>
+          </li>
+        </ul>
+        <a href = "#navbarText" class = "nav-link navbar-writing text-center"><h6>Return to Top</h6></a>
+      </div>
+      <div class="footer-copyright text-center py-3" style = "color: white">© 2019 Copyright:
+        <p> LivBoulder.com</p>
+      </div>
+    </footer>
+  </section>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
