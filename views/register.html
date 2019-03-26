@@ -1,67 +1,121 @@
+<!--The register page-->
 <html>
-<head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">  
- <link href="../resources/css/my_style.css" rel="stylesheet">
-<title>register</title>
-</head>
-<body>
-<div class="container">
-<br>  <h1 class="Display-3 text-center">LivBouder</h1>
-<hr>
+	<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--Shares a stylesheet with the login page-->
+    <link href="../resources/css/login.css" rel="stylesheet">
+    <!--Links to the javascript functions-->
+    <script type="text/javascript" src="../resources/scripts/register.js"></script>
+    <title>LivBoulder Register</title>
+ </head>
 
 
-<div class="row justify-content-center">
-<div class="col-md-6">
-<div class="card">
-<header class="card-header">
-	<a href="" class="float-right btn btn-outline-primary mt-1">Log in</a>
-	<h4 class="card-title mt-2">Sign up</h4>
-</header>
-<article class="card-body">
-<form>
-	<div class="form-row">
-		<div class="col form-group">
-			<label>First name </label>   
-		  	<input type="text" class="form-control" placeholder="">
-		</div> <!-- form-group end.// -->
-		<div class="col form-group">
-			<label>Last name</label>
-		  	<input type="text" class="form-control" placeholder=" ">
-		</div> <!-- form-group end.// -->
-	</div> <!-- form-row end.// -->
-	<div class="form-group">
-		<label>Email address</label>
-		<input type="email" class="form-control" placeholder="">
-		<small class="form-text text-muted">We'll never share your email with anyone else.</small>
-	</div> <!-- form-group end.// -->
-	<div class="form-group">
-			<label class="form-check form-check-inline">
-		  <input class="form-check-input" type="radio" name="gender" value="option1">
-		  <span class="form-check-label"> Male </span>
-		</label>
-		<label class="form-check form-check-inline">
-		  <input class="form-check-input" type="radio" name="gender" value="option2">
-		  <span class="form-check-label"> Female</span>
-		</label>
-	</div> <!-- form-group end.// -->
-	
-	<div class="form-group">
-		<label>Create password</label>
-	    <input class="form-control" type="password">
-	</div> <!-- form-group end.// -->  
+<body id = "registerBody">
+
+<!--Our navbar - for the register page, it contains links to the 'Home' and 'Login' pages-->
+    <nav class="navbar navbar-default navbar-expand-lg">
+  	  <a class="navbar-brand" href="home.html"></a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+  		<span class="navbar-toggler-icon"></span>
+  	  </button>
+
+      <div class="collapse navbar-collapse" id="navbarText">
+
+      <ul class="navbar-nav mr-auto">
+  		  <li class="nav-item active">
+  			<a class="nav-link navbar-writing" href="home.html">Home</a>
+  		  </li>
+  		</ul>
+
+      <div class="form-inline my-2 my-lg-0">
+  						<a class="nav-link navbar-writing" href="login.html">Login</a>
+  		</div>
+
+      </div>
+  	</nav>
+
+  <!--This is where the card with all registration information is held-->
+  <div class="container">
+	<br>
+    <h1 class="Display-3 text-center"><b>LivBoulder</b></h1>
+	  <hr>
+	<div class="row justify-content-center">
+	<div class="col-md-6">
+	<div class="card">
+
+  <header class="card-header">
+	<a href="login.html" class="float-right btn btn-outline-success mt-1">Login</a>
+	<h4 class="card-title mt-2 text-center">Register</h4>
+
+  </header>
+	<article class="card-body">
+
+  <!--The form to collect registration inforamtion-->
+  <form>
+
+    <!--The 'Name' field of the form | Has functions to check for valdiity and possibly enable button-->
+    <label class = "text-center"> Name </label>
+    <div class="row">
+      <div class="col">
+        <input id = "firstName" type="text" class="form-control" placeholder="First name" onblur="checkNames(); enableButton();">
+          <small id="nameHelpBlock" class="form-text text-muted"></small>
+      </div>
+      <div class="col">
+        <input id = "lastName" type="text" class="form-control" placeholder="Last name" onblur="checkNames(); enableButton();">
+      </div>
+    </div>
+
+    <br>
+
+    <!--The 'Email' field of the form | Has functions to check for valdiity and possibly enable button-->
+    <div class="form-row">
+  		<div class="col form-group">
+  		<label class="text-center"> Email </label>
+  		  <input type="email" id="email" class="form-control" placeholder="Enter your email here." onblur = "checkEmail(); enableButton();">
+          <small id="emailHelpBlock" class="form-text text-muted">We promise never to send you any spam messages.</small>
+  		</div>
+  </div>
+
+    <!--The 'Username' field of the form | Has functions to check for valdiity and possibly enable button-->
+    <div class="form-row">
+  		<div class="col form-group">
+  		<label class="text-center"> Username </label>
+  		  <input type="text" id="usernameRegister" class="form-control" placeholder="Enter a username here." onblur="checkUsername(); enableButton();">
+          <small id="usernameHelpBlock" class="form-text text-muted"></small>
+  		</div>
+  	</div>
+
+    <!--The 'Password' field of the form | Has functions to check for valdiity and possibly enable button-->
+  	<div class="form-group">
+  		<label>Password</label>
+  		<input type="password" id="passwordRegister" class="form-control" placeholder="Create a secure password." onblur = "checkPassword(); enableButton();">
+      <small id="passwordHelpBlock" class="form-text text-muted">
+        Password must be at least 8 characters long and contain one uppercase, one lowercase, and one number.
+      </small>
+  	</div>
+
+    <!--The 'Confirm Password' field of the form | Has functions to check for valdiity and possibly enable button-->
     <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Register  </button>
-    </div> <!-- form-group// -->      
-    <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
-</form>
-</article> <!-- card-body end .// -->
-<div class="border-top card-body text-center">Have an account? <a href="">Log In</a></div>
-</div> <!-- card.// -->
-</div> <!-- col.//-->
+      <label>Confirm Password</label>
+        <input type="password" id="passwordConfirm" class="form-control" placeholder="Re-type your password." onblur = "confirmPassword(); enableButton();">
+          <small id="confirmHelpBlock" class="form-text text-muted"></small>
+    </div>
 
-</div> <!-- row.//-->
+    <!--The 'Register Your Account' button of the form | Only enabled when all forms are valid-->
+   <div class="form-group">
+        <button type="submit" id = "submitButton" class="btn btn-success btn-block" disabled>Register Your Account</button>
+    </div>
+
+  </form>
+
+  </div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</body>
 
 
-</div> 
-</body>
 </html>
