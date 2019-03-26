@@ -38,12 +38,16 @@
 
 /*Defined Class, creates grey box around text sections */
 .row {
-	background: rgba(5, 5, 5, 0.2);
 	text-align: center;
 }
 
-/*Defined Class, alligns writing in paragraphs to center */
+/*Defined Class, alligns writing in paragraphs to left */
 .txt-align {
-	text-align: center;
+	text-align: left;
 	margin-right: 20%;
+}
+
+/*Defined class, gives the footer a different color*/
+.footer {
+	background-color: #136917;
 }
