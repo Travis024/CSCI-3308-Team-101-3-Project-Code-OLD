@@ -1,18 +1,16 @@
-<!-- login-->
+<!-- login page-->
 <html>
 	<head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
- <link href="../resources/css/login.css" rel="stylesheet">
-
- <title>LivBoulder Login</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ 		<link href="../resources/css/login.css" rel="stylesheet">
+		  <script type="text/javascript" src="../resources/scripts/login.js"></script>
+		<title>LivBoulder Login</title>
  </head>
-	<body>
+	<body id = "loginBody">
 
+		<!--The navbar for the login page | Contains links to 'home' and 'register' pages-->
 		<nav class="navbar navbar-default navbar-expand-lg">
-		  <a class="navbar-brand" href="home.html">
-	    <!-- This is where we would add a logo to our nav bar if we want it -->
-			<!--<img class="rounded-circle" src="../resources/img/cu_boulder_logo.jpg" alt="" width="30" height="30"> -->
-		  </a>
+		  <a class="navbar-brand" href="home.html"></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		  </button>
@@ -27,31 +25,48 @@
 		  </div>
 		</nav>
 
+  <!--This marks the beginning of login card content-->
 	<div class="container">
-	<br> <h1 class="Display-3 text-center"><b>LivBoulder</b></h1>
+
+	<br>
+
+	<h1 class="Display-3 text-center"><b>LivBoulder</b></h1>
+
 	<hr>
+
 	<div class="row justify-content-center">
 	<div class="col-md-6">
 	<div class="card">
+
 	<header class="card-header">
-	<a href="register.html" class="float-right btn btn-outline-success mt-1">Register</a>
-	<h4 class="card-title mt-2 text-center">Sign in</h4>
+		<a href="register.html" class="float-right btn btn-outline-success mt-1">Register</a>
+		<h4 class="card-title mt-2 text-center">Sign in</h4>
 	</header>
+
 	<article class="card-body">
+
+	<!--The form to retrieve login information-->
 	<form>
+
+  <!--The 'Username' field of the form | Has a function to check whether or not to enable button-->
 	<div class="form-row">
 		<div class="col form-group">
-		<label class="text-center"> Username </label>
-		<input type="text" id="login" class="form-control" placeholder="username">
+			<label class="text-center"> Username </label>
+			<input type="text" id="usernameLogin" class="form-control" placeholder="Enter your username." onkeyup = "enableButton()">
 		</div>
-		</div>
+	</div>
+
+	<!--The 'Password' field of the form | Has a function to check whether or not to enable button-->
 	<div class="form-group">
 		<label>Password</label>
-		<input type="password" id="password" class="form-control" placeholder="password">
+		<input type="password" id="passwordLogin" class="form-control" placeholder="Enter your password." onkeyup = "enableButton()">
 	</div>
+
+	<!--The 'Sign in' button of the form | Only enabled when both username and password have been filled-->
 	 <div class="form-group">
-        <button type="submit" class="btn btn-success btn-block"> Sign in  </button>
+        <button type="submit" id = "signInButton" class="btn btn-success btn-block" disabled> Sign in </button>
     </div>
+
 	</div>
 	</div>
 	</div>
