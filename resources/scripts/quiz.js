@@ -9,7 +9,7 @@ function homeAlert(){
 
 //If the user is ready to submit, they can do so. Otherwise, they can go back and change their answers.
 function submitAlert(){
-  var Ans = confirm("Have you checked over all of your answers to make sure they properly reflect the activity you're looking for?");
+  var Ans = confirm("Have you checked over all of your answers to make sure they properly reflect the activities you're looking for?");
     if(Ans==true)
       document.getElementById('submitButton').href = "homePostLogin.html";
     else
