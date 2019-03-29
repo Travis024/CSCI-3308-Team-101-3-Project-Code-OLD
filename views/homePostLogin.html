@@ -1,123 +1,218 @@
-<!-- Home Page -->
+<!-- Home Page - Post Login -->
+<!--API KEY: AIzaSyDzmPkC6AJN54aJx75Y-YhuoA9J5LKckRU-->
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title>LivBoulder Home</title>
-	<link rel='icon' href='../resources/img/favicon.ico' type='image/x-icon'/>
-	<link href="../resources/css/home.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-	
+    <title>LivBoulder Recommended Activites</title>
+  	<link rel='icon' href='../resources/img/favicon.ico' type='image/x-icon'/>
+  	<link href="../resources/css/homePostLogin.css" rel="stylesheet">
+      <!-- Bootstrap core CSS -->
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   </head>
-  <body>
-	<nav class="navbar navbar-default navbar-expand-lg">
-	  <a class="navbar-brand" href="home.html">
-    <!-- This is where we would add a logo to our nav bar if we want it -->
-		<!--<img class="rounded-circle" src="../resources/img/cu_boulder_logo.jpg" alt="" width="30" height="30"> -->
-	  </a>
+
+	<body>
+
+  <!--The nav-bar | Options are to Re-Take Quiz or Logout to Home Page-->
+  <nav class="navbar sticky-top navbar-default navbar-expand-lg">
+	  <a class="navbar-brand" href="home.html"></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarText">
 		<ul class="navbar-nav mr-auto">
 		  <li class="nav-item active">
-			<a class="nav-link navbar-writing" href="home.html">Home</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link navbar-writing" href="recommendations.html">Recommendations <span class="sr-only">(current)</span></a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link navbar-writing" href="registration.html">Registration</a>
+			<a class="nav-link navbar-writing" href="quiz.html">Re-Take Quiz</a>
 		  </li>
 		</ul>
 		<div class="form-inline my-2 my-lg-0">
-			<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Login</button>
+						<a class="nav-link navbar-writing" href="home.html">Logout</a>
 		</div>
 	  </div>
 	</nav>
 
-	<!-- this is the table that will store our recommendations -->
-	<table class="table">
-	  <thead class="thead-dark">
-		<tr>
-		  <th scope="col">Activity</th>
-		  <th scope="col">Description</th>
-		  <th scope="col">Cute Pic</th>
-		  <th scope="col">Add to things I want to do</th>
-		  <th scope="col">Add to things I've done</th>
-		</tr>
-	  </thead>
-	  <tbody>
-		<tr>
-		  <td>Bear Peak</td>
-		  <td>The peak of bear</td>
-		  <td><img src="../resources/img/bearPeak.jpg" class="img-fluid" alt="Bear Peak" width="80%"></td>
-		  <td><button type="button" class="btn btn-dark">Add to things you want to do</button></td>
-		  <td><button type="button" class="btn btn-dark">Add to things you've done</button></td>
-		</tr>
-		<tr>
-		  <td>Flatiron Hike</td>
-		  <td>Our beautiful flatirons</td>
-		  <td><img src="../resources/img/flatironHike.jpg" class="img-fluid" alt="Flatiron Hike" width="80%"></td>
-		  <td><button type="button" class="btn btn-dark">Add to things you want to do</button></td>
-		  <td><button type="button" class="btn btn-dark">Add to things you've done</button></td>
-		</tr>
-		<tr>
-		  <td>Horseback Riding</td>
-		  <td>Riding some horses</td>
-		  <td><img src="../resources/img/horsebackRiding.jpg" class="img-fluid" alt="Horses" width="80%"></td>
-		  <td><button type="button" class="btn btn-dark">Add to things you want to do</button></td>
-		  <td><button type="button" class="btn btn-dark">Add to things you've done</button></td>
-		</tr>
-	  </tbody>
-	</table>
-	
-	
-	<!-- row contains two columns that will be our two sections at bottom -->
-	<div class="row">
-		<!-- This column is for hikes you want to do, add hikes you've liked to it and add links from photos to that hike -->
-	  <div class="column">
-		<h1 style="text-align:center">Hikes You Want To Do</h1>
-		
-		<div class="row">
-		  <div class="col-md-12">
-			<div id="mdb-lightbox-ui"></div>
-			<div class="mdb-lightbox no-margin">
-				<figure class="col-md-4">
-				<a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(121).jpg"
-				  data-size="1600x1067">
-				  <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(121).jpg"
-					class="img-fluid">
-				  <h3 class="text-center my-3">Photo title</h3>
-				</a>
-			  </figure>
 
-			  <figure class="col-md-4">
-				<a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(96).jpg"
-				  data-size="1600x1067">
-				  <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(96).jpg"
-					class="img-fluid" />
-				  <h3 class="text-center my-3">Photo title</h3>
-				</a>
-			  </figure>
+  <!--Page Header-->
+  <section class = "green-color" id="recommendations">
+    <div class="container">
+			<br>
+      <h1 class="grid-label cream-color text-center ">Your Recommended Activities</h1>
+      <br>
+      <br>
+    </div>
+
+		<!--This section is a card deck for each activity-->
+		<!--We will load in images, names, and descriptions based on results from recommendation quiz-->
+     <div class="card-deck">
+
+			<!--Activity 1-->
+			<div class="card border-0">
+				<img id = "activity1img" class="card-img-top" src='../resources/img/bearPeak.jpg'>
+	      <div class="card-body text-center grayCard">
+	        <h4 id = "activity1name" class="card-text">Bear Peak</h4>
+					<p id = "activty1description" class = "card-text">A must-do hike for anyone in Colorado! The trail is challenging, but the views seen throughout the hike are truly stunning. Plus, a good workout means you can kick back an extra beer after!</p>
+				</div>
+	    </div>
+
+			<!--Activity 2-->
+			<div class="card border-0">
+				<img id = "activity2img" class="card-img-top" src='../resources/img/boulderAle.jpg'>
+				<div class="card-body text-center grayCard">
+	        <h4 id = "activity2name" class="card-text">Boulder Ale Trail</h4>
+					<p id = "activty2description" class = "card-text">15 miles, 12 breweries, and 0 cars! The Boulder Ale trail is the perfect way to enjoy your two favorite things in one of the nations biggest brewing cities!</p>
+				</div>
+	    </div>
+
+			<!--Activity 3-->
+			<div class="card border-0">
+				<img id = "activity3img" class="card-img-top" src='../resources/img/boulderCreekPath.jpg'>
+				<div class="card-body text-center grayCard">
+	        <h4 id = "activity3name" class="card-text">Boulder Creek Path</h4>
+					<p id = "activty3description" class = "card-text">Go for a stroll or hop on your bike as you travel along the Boulder Creek Path! This path follows the gorgeous Boulder Creek and allows for multiple pitstops at some of Boulders finest locations.</p>
+					<button id = "activity5button" type="button" class="btn btn-success" disabled>Look Below For Maps!</button>
+				</div>
+	    </div>
+
+			<!--Activity 4-->
+			<div class="card border-0">
+        <img id = "activity4img" class="card-img-top" src='../resources/img/flatironHike.jpg'>
+				<div class="card-body text-center grayCard">
+	        <h4 id = "activity4name" class="card-text">Flatiron Hike</h4>
+					<p id = "activty4description" class = "card-text">Hike up Boulders most prominent features - the Flatirons! This is a 2.6 mile round trip hike that offers a gorgeous panoramic view at the top.</p>
+				</div>
+	    </div>
+
+			<!--Activity 5-->
+			 <div class="card border-0">
+				<img id = "activity5img" class="card-img-top" src='../resources/img/flatironsGolf.jpg'>
+	      <div class="card-body text-center grayCard">
+	        <h4 id = "activity5name" class="card-text">Flatirons Golf</h4>
+					<p id = "activty5description" class = "card-text">Enjoy Boulders premier golf course with a wonderful view of the Flatirons! Course regulars love the moderate challenge of the course and the friendly staff.</p>
+				</div>
+
 			</div>
-		</div>
-		</div>
 	</div>
-	  <!-- This column is for hikes you've already done, after you click done this hike it's photo is added here -->
-	  <div class="column">
-		<h1 style="text-align:center">Hikes You've Already Done</h1>
-	  </div>
-	</div>
-	
-	
-	
-	
-	
+
+	<br>
+	<br>
+
+<!--Contains the Google Maps API-->
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col"></div>
+
+			<!--Code from Google Help Pages for setting up API-->
+			<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+			<div id = "map" class="col-6" style = "height: 75vh; width: 75vh;">
+				<script>
+				      // This example adds a search box to a map, using the Google Place Autocomplete
+				      // feature. People can enter geographical searches. The search box will return a
+				      // pick list containing a mix of places and predicted search terms.
+
+				      // This example requires the Places library. Include the libraries=places
+				      // parameter when you first load the API. For example:
+				      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+				      function initAutocomplete() {
+				        var map = new google.maps.Map(document.getElementById('map'), {
+				          center: {lat: 40.014984, lng: -105.270546},
+				          zoom: 13,
+				          mapTypeId: 'roadmap'
+				        });
+
+				        // Create the search box and link it to the UI element.
+				        var input = document.getElementById('pac-input');
+				        var searchBox = new google.maps.places.SearchBox(input);
+				        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+				        // Bias the SearchBox results towards current map's viewport.
+				        map.addListener('bounds_changed', function() {
+				          searchBox.setBounds(map.getBounds());
+				        });
+
+				        var markers = [];
+				        // Listen for the event fired when the user selects a prediction and retrieve
+				        // more details for that place.
+				        searchBox.addListener('places_changed', function() {
+				          var places = searchBox.getPlaces();
+
+				          if (places.length == 0) {
+				            return;
+				          }
+
+				          // Clear out the old markers.
+				          markers.forEach(function(marker) {
+				            marker.setMap(null);
+				          });
+				          markers = [];
+
+				          // For each place, get the icon, name and location.
+				          var bounds = new google.maps.LatLngBounds();
+				          places.forEach(function(place) {
+				            if (!place.geometry) {
+				              console.log("Returned place contains no geometry");
+				              return;
+				            }
+				            var icon = {
+				              url: place.icon,
+				              size: new google.maps.Size(71, 71),
+				              origin: new google.maps.Point(0, 0),
+				              anchor: new google.maps.Point(17, 34),
+				              scaledSize: new google.maps.Size(25, 25)
+				            };
+
+				            // Create a marker for each place.
+				            markers.push(new google.maps.Marker({
+				              map: map,
+				              icon: icon,
+				              title: place.name,
+				              position: place.geometry.location
+				            }));
+
+				            if (place.geometry.viewport) {
+				              // Only geocodes have viewport.
+				              bounds.union(place.geometry.viewport);
+				            } else {
+				              bounds.extend(place.geometry.location);
+				            }
+				          });
+				          map.fitBounds(bounds);
+				        });
+				      }
+
+				    </script>
+				    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzmPkC6AJN54aJx75Y-YhuoA9J5LKckRU&libraries=places&callback=initAutocomplete" async defer></script>
+			   </div>
+
+			 <div class="col"></div>
+
+				</div>
+
+			</div>
+
+  </section>
+
+<!--Page footer-->
+<section class = "footer">
+  <footer class="page-footer font-small unique-color-dark pt-4">
+      <div class="container">
+        <ul class="list-unstyled list-inline text-center py-2">
+          <li class="list-inline-item">
+            <h5 class="mb-1" style = "color: white">Thanks for using LivBoulder! Let us know what you think!</h5>
+          </li>
+        </ul>
+        <a href = "#navbarText" class = "nav-link navbar-writing text-center"><h6>Return to Top</h6></a>
+      </div>
+      <div class="footer-copyright text-center py-3" style = "color: white">© 2019 Copyright:
+        <p> LivBoulder.com</p>
+      </div>
+    </footer>
+  </section>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
