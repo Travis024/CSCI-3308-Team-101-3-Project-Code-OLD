@@ -3,8 +3,23 @@ html{
 	overflow-x: hidden;
 }
 
-/* Navbar */
-.navbar-default {
+/*Creates a nice looking scrollbar*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Navbar*/
+.navbar-default{
 	background-color: #136917;
 }
 
