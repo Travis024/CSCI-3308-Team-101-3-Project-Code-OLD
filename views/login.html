@@ -3,8 +3,9 @@
 	<head>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
  		<link href="../resources/css/login.css" rel="stylesheet">
-		  <script type="text/javascript" src="../resources/scripts/login.js"></script>
+		<script type="text/javascript" src="../resources/scripts/login.js"></script>
 		<title>LivBoulder Login</title>
+		<link rel='icon' href='../resources/img/tabIcon.png' type='image/x-icon'/>
  </head>
 	<body id = "loginBody">
 
@@ -63,9 +64,12 @@
 	</div>
 
 	<!--The 'Sign in' button of the form | Only enabled when both username and password have been filled-->
+	<!--'formaction' sends the user to take a quiz after signing in-->
 	 <div class="form-group">
         <button type="submit" id = "signInButton" class="btn btn-success btn-block" disabled formaction="quiz.html"> Sign in </button>
     </div>
+
+	</form>
 
 	</div>
 	</div>
