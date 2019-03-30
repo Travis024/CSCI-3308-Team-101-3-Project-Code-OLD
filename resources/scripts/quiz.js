@@ -15,3 +15,13 @@ function submitAlert(){
     else
       event.preventDefault();
 }
+
+//This function counts how many "Yes" buttons the user selected. We can then pass this to the 'homePostLogin' page.
+//By using session storage, the result only lasts as long as the tab is open. Once closed, the storage is cleared.
+function countYes(){
+  var numYesQuery = document.querySelectorAll('.yesButton.active');
+  var numYes = numYesQuery.length;
+
+  sessionStorage.setItem("countYes", numYes);
+  alert(sessionStorage.getItem("countYes"));
+}
