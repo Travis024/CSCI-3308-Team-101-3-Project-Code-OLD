@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
+    <script type="text/javascript" src="../resources/scripts/homePostLogin.js"></script>
     <title>LivBoulder Recommended Activites</title>
   	<link rel='icon' href='../resources/img/tabIcon.png' type='image/x-icon'/>
   	<link href="../resources/css/homePostLogin.css" rel="stylesheet">
@@ -16,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
-	<body>
+	<body onload="loadActivities();">
 
   <!--The nav-bar | Options are to Re-Take Quiz or Logout to Home Page-->
   <nav class="navbar sticky-top navbar-default navbar-expand-lg">
@@ -55,7 +56,7 @@
 				<img id = "activity1img" class="card-img-top" src='../resources/img/bearPeak.jpg'>
 	      <div class="card-body text-center grayCard">
 	        <h4 id = "activity1name" class="card-text">Bear Peak</h4>
-					<p id = "activty1description" class = "card-text">A must-do hike for anyone in Colorado! The trail is challenging, but the views seen throughout the hike are truly stunning. Plus, a good workout means you can kick back an extra beer after!</p>
+					<p id = "activity1description" class = "card-text">A must-do hike for anyone in Colorado! The trail is challenging, but the views seen throughout the hike are truly stunning. Plus, a good workout means you can kick back an extra beer after!</p>
 				</div>
 	    </div>
 
@@ -64,7 +65,7 @@
 				<img id = "activity2img" class="card-img-top" src='../resources/img/boulderAle.jpg'>
 				<div class="card-body text-center grayCard">
 	        <h4 id = "activity2name" class="card-text">Boulder Ale Trail</h4>
-					<p id = "activty2description" class = "card-text">15 miles, 12 breweries, and 0 cars! The Boulder Ale trail is the perfect way to enjoy your two favorite things in one of the nations biggest brewing cities!</p>
+					<p id = "activity2description" class = "card-text">15 miles, 12 breweries, and 0 cars! The Boulder Ale trail is the perfect way to enjoy your two favorite things in one of the nations biggest brewing cities!</p>
 				</div>
 	    </div>
 
@@ -73,8 +74,8 @@
 				<img id = "activity3img" class="card-img-top" src='../resources/img/boulderCreekPath.jpg'>
 				<div class="card-body text-center grayCard">
 	        <h4 id = "activity3name" class="card-text">Boulder Creek Path</h4>
-					<p id = "activty3description" class = "card-text">Go for a stroll or hop on your bike as you travel along the Boulder Creek Path! This path follows the gorgeous Boulder Creek and allows for multiple pitstops at some of Boulders finest locations.</p>
-					<button id = "activity5button" type="button" class="btn btn-success" disabled>Look Below For Maps!</button>
+					<p id = "activity3description" class = "card-text">Go for a stroll or hop on your bike as you travel along the Boulder Creek Path! This path follows the gorgeous Boulder Creek and allows for multiple pitstops at some of Boulders finest locations.</p>
+					<button type="button" class="btn btn-success" disabled>Look Below For Maps!</button>
 				</div>
 	    </div>
 
@@ -83,7 +84,7 @@
         <img id = "activity4img" class="card-img-top" src='../resources/img/flatironHike.jpg'>
 				<div class="card-body text-center grayCard">
 	        <h4 id = "activity4name" class="card-text">Flatiron Hike</h4>
-					<p id = "activty4description" class = "card-text">Hike up Boulders most prominent features - the Flatirons! This is a 2.6 mile round trip hike that offers a gorgeous panoramic view at the top.</p>
+					<p id = "activity4description" class = "card-text">Hike up Boulders most prominent features - the Flatirons! This is a 2.6 mile round trip hike that offers a gorgeous panoramic view at the top.</p>
 				</div>
 	    </div>
 
@@ -92,7 +93,7 @@
 				<img id = "activity5img" class="card-img-top" src='../resources/img/flatironsGolf.jpg'>
 	      <div class="card-body text-center grayCard">
 	        <h4 id = "activity5name" class="card-text">Flatirons Golf</h4>
-					<p id = "activty5description" class = "card-text">Enjoy Boulders premier golf course with a wonderful view of the Flatirons! Course regulars love the moderate challenge of the course and the friendly staff.</p>
+					<p id = "activity5description" class = "card-text">Enjoy Boulders premier golf course with a wonderful view of the Flatirons! Course regulars love the moderate challenge of the course and the friendly staff.</p>
 				</div>
 
 			</div>
@@ -216,7 +217,7 @@
             <a href="" class="fa fa-reddit"></a>
           </li>
         </ul>
-        <a href = "#navbarText" class = "nav-link navbar-writing text-center"><h6>Return to Top</h6></a>
+        <a href = "#recommendations" class = "nav-link navbar-writing text-center"><h6>Return to Top</h6></a>
       </div>
       <div class="footer-copyright text-center py-3" style = "color: white">© 2019 Copyright:
         <p> LivBoulder.com</p>

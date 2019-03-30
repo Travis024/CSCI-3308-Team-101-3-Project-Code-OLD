@@ -38,6 +38,7 @@
 
     <!--Intro slide-->
     <!--On each slide, style sets height and width to 100vh, or 100% of the screen-->
+    <!--Labels are marked as 'active' when cliked, then counted using the 'countYes() helper function'-->
     <div class="carousel-item active">
       <img class="d-block w-100" src="../resources/img/quizPicture1.jpg" alt="Hot air balloons" style = "height: 100vh; width: 100vh;">
       <div class="carousel-caption d-none d-md-block">
@@ -54,11 +55,11 @@
         <h2>Question 1</h2>
         <p>Do you like activities that involve water?</p>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="yesQuestion1" autocomplete="off" checked>Yes
+            <label class="btn btn-success yesButton">
+              <input type="radio" name="options" autocomplete="off" checked>Yes
             </label>
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="noQuestion1" autocomplete="off">No
+            <label class="btn btn-success noButton">
+              <input type="radio" name="options" autocomplete="off">No
             </label>
           </div>
       </div>
@@ -71,11 +72,11 @@
         <h2>Question 2</h2>
         <p>Do you like activities that involve biking?</p>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="yesQuestion2" autocomplete="off" checked>Yes
+            <label class="btn btn-success yesButton">
+              <input type="radio" name="options" autocomplete="off" checked>Yes
             </label>
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="noQuestion2" autocomplete="off">No
+            <label class="btn btn-success noButton">
+              <input type="radio" name="options" autocomplete="off">No
             </label>
           </div>
       </div>
@@ -88,11 +89,11 @@
         <h2>Question 3</h2>
         <p>Do you like activities that involve hiking?</p>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="yesQuestion3" autocomplete="off" checked>Yes
+            <label class="btn btn-success yesButton">
+              <input type="radio" name="options" autocomplete="off" checked>Yes
             </label>
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="noQuestion3" autocomplete="off">No
+            <label class="btn btn-success noButton">
+              <input type="radio" name="options" autocomplete="off">No
             </label>
           </div>
       </div>
@@ -105,11 +106,11 @@
         <h2>Question 4</h2>
         <p>Do you like activities that require lots of exercise?</p>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="yesQuestion4" autocomplete="off" checked>Yes
+            <label class="btn btn-success yesButton">
+              <input type="radio" name="options" autocomplete="off" checked>Yes
             </label>
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="noQuestion4" autocomplete="off">No
+            <label class="btn btn-success noButton">
+              <input type="radio" name="options" autocomplete="off">No
             </label>
           </div>
       </div>
@@ -122,11 +123,11 @@
         <h2>Question 5</h2>
         <p>Do you like activities that are competitive?</p>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="yesQuestion5" autocomplete="off" checked>Yes
+            <label class="btn btn-success yesButton">
+              <input type="radio" name="options" autocomplete="off" checked>Yes
             </label>
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="noQuestion5" autocomplete="off">No
+            <label class="btn btn-success noButton">
+              <input type="radio" name="options" autocomplete="off">No
             </label>
           </div>
       </div>
@@ -139,11 +140,11 @@
         <h2>Question 6</h2>
         <p>Do you like activities that are easy?</p>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="yesQuestion6" autocomplete="off" checked>Yes
+            <label class="btn btn-success yesButton">
+              <input type="radio" name="options" autocomplete="off" checked>Yes
             </label>
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="noQuestion6" autocomplete="off">No
+            <label class="btn btn-success noButton">
+              <input type="radio" name="options" autocomplete="off">No
             </label>
           </div>
       </div>
@@ -156,11 +157,11 @@
         <h2>Question 7</h2>
         <p>Do you like activities that are long?</p>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="yesQuestion7" autocomplete="off" checked>Yes
+            <label class="btn btn-success yesButton">
+              <input type="radio" name="options" autocomplete="off" checked>Yes
             </label>
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="noQuestion7" autocomplete="off">No
+            <label class="btn btn-success noButton">
+              <input type="radio" name="options" autocomplete="off">No
             </label>
           </div>
       </div>
@@ -173,11 +174,11 @@
         <h2>Question 8</h2>
         <p>Do you like activities that are adventerous?</p>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="yesQuestion8" autocomplete="off" checked>Yes
+            <label class="btn btn-success yesButton">
+              <input type="radio" name="options"  autocomplete="off" checked>Yes
             </label>
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="noQuestion8" autocomplete="off">No
+            <label class="btn btn-success noButton">
+              <input type="radio" name="options" autocomplete="off">No
             </label>
           </div>
       </div>
@@ -190,16 +191,16 @@
         <h2>Question 9</h2>
         <p>Do you like activities that are close to Boulder?</p>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="yesQuestion9" autocomplete="off" checked>Yes
+            <label class="btn btn-success yesButton">
+              <input type="radio" name="options" autocomplete="off" checked>Yes
             </label>
-            <label class="btn btn-success">
-              <input type="radio" name="options" id="noQuestion9" autocomplete="off">No
+            <label class="btn btn-success noButton">
+              <input type="radio" name="options" autocomplete="off">No
             </label>
           </div>
           <br>
           <br>
-          <a href="" id = "submitButton" class="btn btn-success" role="button" onclick="submitAlert()">Submit and View Recommended Activities</a>
+          <a href="" id = "submitButton" class="btn btn-success" role="button" onclick="submitAlert(); countYes();">Submit and View Recommended Activities</a>
       </div>
     </div>
 
