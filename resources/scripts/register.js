@@ -55,9 +55,9 @@ function checkUsername(){
 }
 
 //This function uses a regular expression to ensure the password meets the given criteria
-//The criteria are: At least 8 characters, 1 uppercase, 1 lowercase, 1 number
+//The criteria are: At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
 function checkPassword(){
-  var regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+  var regexPassword = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[~@#\$%\^&\*_\-\+=`|{}:;!\.\?\"()\[\]]).{8,25})/;
   var userPassword = document.getElementById('passwordRegister');
 
   if(userPassword.value.match(regexPassword)){
@@ -67,7 +67,7 @@ function checkPassword(){
     passwordValid = true;
   }
   else{
-    document.getElementById('passwordHelpBlock').innerHTML = "Your password doesn't meet all criteria - you need 8 characters, one uppercase, one lowercase, and one number.";
+    document.getElementById('passwordHelpBlock').innerHTML = "Your password doesn't meet all criteria - you need at least 8 characters, one uppercase, one lowercase, one number, and one special character.";
     document.getElementById('passwordRegister').classList.remove('is-valid');
     document.getElementById('passwordRegister').classList.add('is-invalid');
     passwordValid = false;
