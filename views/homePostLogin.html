@@ -1,5 +1,6 @@
 <!-- Home Page - Post Login -->
-<!--API KEY: AIzaSyDzmPkC6AJN54aJx75Y-YhuoA9J5LKckRU-->
+<!--GOOGLE MAPS API KEY: AIzaSyDzmPkC6AJN54aJx75Y-YhuoA9J5LKckRU-->
+<!--DARKSKY API KEY: db22b59364315837d7cdf8a95013e6c6-->
 <!doctype html>
 <html lang="en">
 
@@ -75,7 +76,7 @@
 				<div class="card-body text-center grayCard">
 	        <h4 id = "activity3name" class="card-text">South Mesa Trail</h4>
 					<p id = "activity3description" class = "card-text">The South Mesa Trail isn't mentioned as much as some other hikes in Boulder, but that doesn't mean that it's not just as fun!</p>
-					<button type="button" class="btn btn-success" disabled>Look Below For Maps!</button>
+					<button type="button" class="btn btn-success" disabled>There's More Below!</button>
 				</div>
 	    </div>
 
@@ -102,12 +103,15 @@
 	<br>
 	<br>
 
+  <h1 class="grid-label cream-color text-center ">Maps and Weather</h1>
+
+  <br>
+  <br>
+
 <!--Contains the Google Maps API-->
 	<div class="container">
 
 		<div class="row">
-
-			<div class="col"></div>
 
 			<!--Help from Google Help Pages for setting up API-->
 			<input id="pac-input" class="controls" type="text" placeholder="Search Box">
@@ -185,9 +189,116 @@
 				    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzmPkC6AJN54aJx75Y-YhuoA9J5LKckRU&libraries=places&callback=initAutocomplete" async defer></script>
 			   </div>
 
-			 <div class="col"></div>
+         <!--These are the scripts needed in order to work with the Darksky API-->
+         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+     	   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+     	   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+     	   <script>
+            $(document).ready(function() {
+              var url ='https://api.darksky.net/forecast/db22b59364315837d7cdf8a95013e6c6/40.014984,-105.270546'; //Place your DarkSky API Call Here
+        			$.ajax({url:url, dataType:"jsonp"}).then(function(data) {
 
-				</div>
+                console.log(data);
+
+                var week_names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; //This is a helper array to help convert the day of the week [0-7] to a named value [Sunday - Saturday]
+
+                var unix_time = data.currently.time;//Retrieve the current timestamp
+                var javascript_time = new Date(unix_time * 1000);//Convert the unix time stamp to javascript
+                var currentDay = javascript_time.getDay();
+
+                document.getElementById('day1Header').innerHTML = week_names[currentDay];
+                document.getElementById('day1High').innerHTML = "High: " + data.daily.data[currentDay].temperatureMax + " F";
+                document.getElementById('day1Low').innerHTML = "Low: " + data.daily.data[currentDay].temperatureMin + " F";
+                document.getElementById('day1Wind').innerHTML = "Wind: " + data.daily.data[currentDay].windSpeed + " MPH";
+                document.getElementById('day1Rain').innerHTML = "Rain: " + data.daily.data[currentDay].precipProbability + "%";
+
+                currentDay = currentDay + 1;
+                if(currentDay > 6) currentDay = 0;
+
+                document.getElementById('day3Header').innerHTML = week_names[currentDay];
+                document.getElementById('day3High').innerHTML = "High: " + data.daily.data[currentDay].temperatureMax + " F";
+                document.getElementById('day3Low').innerHTML = "Low: " + data.daily.data[currentDay].temperatureMin + " F";
+                document.getElementById('day3Wind').innerHTML = "Wind: " + data.daily.data[currentDay].windSpeed + " MPH";
+                document.getElementById('day3Rain').innerHTML = "Rain: " + data.daily.data[currentDay].precipProbability + "%";
+
+                currentDay = currentDay + 1;
+                if(currentDay > 6) currentDay = 0;
+
+                document.getElementById('day2Header').innerHTML = week_names[currentDay];
+                document.getElementById('day2High').innerHTML = "High: " + data.daily.data[currentDay].temperatureMax + " F";
+                document.getElementById('day2Low').innerHTML = "Low: " + data.daily.data[currentDay].temperatureMin + " F";
+                document.getElementById('day2Wind').innerHTML = "Wind: " + data.daily.data[currentDay].windSpeed + " MPH";
+                document.getElementById('day2Rain').innerHTML = "Rain: " + data.daily.data[currentDay].precipProbability + "%";
+
+                currentDay = currentDay + 1;
+                if(currentDay > 6) currentDay = 0;
+
+                document.getElementById('day4Header').innerHTML = week_names[currentDay];
+                document.getElementById('day4High').innerHTML = "High: " + data.daily.data[currentDay].temperatureMax + " F";
+                document.getElementById('day4Low').innerHTML = "Low: " + data.daily.data[currentDay].temperatureMin + " F";
+                document.getElementById('day4Wind').innerHTML = "Wind: " + data.daily.data[currentDay].windSpeed + " MPH";
+                document.getElementById('day4Rain').innerHTML = "Rain: " + data.daily.data[currentDay].precipProbability + "%";
+              })
+            });
+          </script>
+
+      <!--This is where the cards for the weather forecast go-->
+			 <div class="col">
+
+             <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-top: 10%;">
+               <div class="card-header" id = "day1Header"></div>
+                <div class="card-body">
+                  <p class="card-text text-left" id = "day1High"></p>
+                  <p class="card-text text-left" id = "day1Low"></p>
+                  <p class="card-text text-left" id = "day1Wind"></p>
+                  <p class="card-text text-left" id = "day1Rain"></p>
+                </div>
+              </div>
+
+
+
+              <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-top: 10%;">
+                <div class="card-header" id = "day2Header"></div>
+                 <div class="card-body">
+                   <p class="card-text text-left" id = "day2High"></p>
+                   <p class="card-text text-left" id = "day2Low"></p>
+                   <p class="card-text text-left" id = "day2Wind"></p>
+                   <p class="card-text text-left" id = "day2Rain"></p>
+                 </div>
+               </div>
+
+
+       </div>
+
+       <div class="col">
+
+         <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-top: 10%;">
+           <div class="card-header" id = "day3Header"></div>
+            <div class="card-body">
+              <p class="card-text text-left" id = "day3High"></p>
+              <p class="card-text text-left" id = "day3Low"></p>
+              <p class="card-text text-left" id = "day3Wind"></p>
+              <p class="card-text text-left" id = "day3Rain"></p>
+            </div>
+          </div>
+
+
+
+          <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-top: 10%;">
+            <div class="card-header" id = "day4Header"></div>
+             <div class="card-body">
+               <p class="card-text text-left" id = "day4High"></p>
+               <p class="card-text text-left" id = "day4Low"></p>
+               <p class="card-text text-left" id = "day4Wind"></p>
+               <p class="card-text text-left" id = "day4Rain"></p>
+             </div>
+           </div>
+
+
+       </div>
+
+
+			</div>
 
 			</div>
 
@@ -224,9 +335,5 @@
       </div>
     </footer>
   </section>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 </html>
