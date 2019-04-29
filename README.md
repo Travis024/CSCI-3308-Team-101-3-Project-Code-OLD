@@ -2,7 +2,7 @@
 
 ## About
 
-This is the (old) project code for Team 101-3 in CSCI 3308.  To find our final version, please view https://github.com/Travis024/CSCI-3308-NEW-Project-Code/blob/master/README.md
+__TO VIEW THE NEW AND UPDATED VERSION OF OUR PROJECT, PLEASE VIEW:__ https://github.com/Travis024/CSCI-3308-NEW-Project-Code/blob/master/README.md
 
 Over the course of the semester we put our newly learned skills to use as we built a Boulder-based activity recommendation web application named LivBoulder.
 
